@@ -53,6 +53,13 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Optional RAG helpers such as LangChain and FAISS are grouped under the
+`rag` extra:
+
+```bash
+pip install '.[rag]'
+```
+
 Run the API locally:
 
 ```bash

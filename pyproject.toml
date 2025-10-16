@@ -15,8 +15,6 @@ dependencies = [
   "uvicorn[standard]>=0.27,<0.28",
   "pydantic>=2.6,<3",
   "python-dotenv>=1.0,<2",
-  "langchain>=0.1,<0.2",
-  "faiss-cpu>=1.7,<2",
   "httpx>=0.26,<0.27"
 ]
 
@@ -25,6 +23,10 @@ dev = [
   "ruff>=0.2,<0.3",
   "black>=24.3,<25",
   "mypy>=1.8,<2"
+]
+rag = [
+  "langchain>=0.1,<0.2",
+  "faiss-cpu>=1.7,<2"
 ]
 
 [tool.black]
