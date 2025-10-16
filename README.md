@@ -289,6 +289,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **FastAPI** for the excellent Python web framework
 - **React** and **Vite** for the modern frontend stack
 - **FAISS** for efficient vector similarity search
+- **cto.new** for initial file structure and UI
 
 ---
 
