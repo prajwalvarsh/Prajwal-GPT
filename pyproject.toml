@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "prajwalgpt-monorepo"
+version = "0.1.0"
+description = "Monorepo configuration for the PrajwalGPT RAG system"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "PrajwalGPT Team"}]
+dependencies = [
+  "fastapi>=0.110,<0.111",
+  "uvicorn[standard]>=0.27,<0.28",
+  "pydantic>=2.6,<3",
+  "python-dotenv>=1.0,<2",
+  "httpx>=0.26,<0.27"
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.2,<0.3",
+  "black>=24.3,<25",
+  "mypy>=1.8,<2"
+]
+rag = [
+  "langchain>=0.1,<0.2",
+  "faiss-cpu>=1.7,<2"
+]
+
+[tool.black]
+line-length = 88
+fast = true
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["backend", "ingestion", "shared"]
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "UP"]
+ignore = ["ANN101", "ANN102"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+mypy_path = ["backend", "ingestion", "shared"]
+plugins = []
+ignore_missing_imports = true

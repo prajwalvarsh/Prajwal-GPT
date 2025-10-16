@@ -1,0 +1,44 @@
+# General
+.DS_Store
+.env
+.env.local
+*.log
+*.sqlite3
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+.venv/
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Deployment artifacts
+deployment/.env
+storage/
+vector_store/
+
+# OS
+Thumbs.db
+
+# Cache
+.cache/
+.nox/
