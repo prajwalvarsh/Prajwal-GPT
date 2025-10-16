@@ -29,6 +29,9 @@ rag = [
   "faiss-cpu>=1.7,<2"
 ]
 
+[tool.hatch.build.targets.wheel]
+packages = ["backend", "ingestion", "shared"]
+
 [tool.black]
 line-length = 88
 fast = true
