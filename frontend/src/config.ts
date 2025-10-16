@@ -19,7 +19,7 @@ export type AppConfig = {
 };
 
 export const APP_CONFIG: AppConfig = {
-  apiBaseUrl: import.meta.env.VITE_API_BASE_URL ?? sharedDefaults.API_BASE_URL,
+  apiBaseUrl: import.meta.env.VITE_API_BASE_URL || sharedDefaults.API_BASE_URL,
   frontendBaseUrl: sharedDefaults.FRONTEND_BASE_URL,
   defaultModel: sharedDefaults.OLLAMA_MODEL,
 };
